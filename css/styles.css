@@ -1,16 +1,23 @@
 html, header, input{
     background:#F6F9F9;
     color:#9EB1B1;
-    font-family: font-family: 'Courgette', cursive;
+    font-family: 'Courgette', cursive;
 }
+
 header{
  
     width:100%;
     height: 80px;
     position: fixed;
     z-index:200;
-    border-bottom: dashed 1px lightgrey;
-      
+    border-bottom: dashed 1px lightgrey;  
+}
+a{
+text-decoration: none;
+    cursor: default;
+}
+a p {
+display: none;
 }
 
 input{
@@ -26,125 +33,53 @@ input{
     margin-top: 25px;
     text-align: center;
 }
-input:focus {
+
+input:focus{
     outline:none;
-    box-shadow: 1px 1px 10px 1px lightgrey; }
-body{
+    box-shadow: 1px 1px 10px 1px lightgrey; 
+}
+
+main{
     position: relative;
     top:80px;
     z-index:100;
 }
+#wrap{
+    width:100%;
+}
+
 .gallery{
-    display: block;
-    margin: auto;
-    max-width: 1050px;   
+    max-width: 1050px; 
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+    justify-content: center;
 }
 
 .thumbnail{
     width:140px;
     margin:20px;
     display: inline-block;
-    box-shadow: 4px 4px 10px 2px lightgrey;
+    box-shadow: 4px 4px 10px 2px grey;
     border-radius:5px;
-    padding:5px;
     cursor: pointer;
+    
 }
+
 .thumbnail:hover{
-    
-    animation: gallery 1500ms linear infinite;
+   transform: scale(1.1);
 }
 
-#overlay{
-    height:100%;
-    width:100%;
-    position: fixed;
-    top:0px;
-    left:0px;
-    background:rgba(0,0,0,.8);
-    z-index:300;
-}
-#overlay img{
-    max-width:800px;
-    width:75%;
-    display: block;
-    margin:55px auto;
-    margin-top:150px;
-    border:solid white 8px;
-    border-radius: 5px;
-    box-shadow: 4px 4px 100px 2px black;
-}
-#overlay p {
-    width:300px;
-    min-width:75%;
+h4{
     text-align: center;
-    direction: block;
-    margin:auto;
-    margin-top:-40px;
-    border-radius: 5px;
-    font-size: 1.333rem;
-    line-height: 41px;
-    text-shadow: 1px 5px 24px black;
-    
-}
-.button{
-  
-    padding:3px;
-    text-decoration: underline;
-    background-color:rgba(255,255,255,.2);
-    width:50px;
-    margin-top:-300px;
-    text-align: center;
-    border: solid 1px red;
- 
 }
 
-#left{
-    float:left;
-    width:50px;
-    text-align: center;
-    margin-left: 20px;
-   
-    
+.lg-sub-html p{
+font-size: 1.1rem;
 }
-#right{
-    float:right;
-    margin-right: 20px; 
-   
-}
-
 @media (min-width:780px){
 .thumbnail{
-    width:191px;
-    margin:29px;}
-    #overlay img{
-    max-width:800px;
-    width:75%;
-    display: block;
-    margin:55px auto;
-    margin-top:5%;
-    border:solid white 8px;
-    border-radius: 5px;
-    box-shadow: 4px 4px 100px 2px black;
+    width:185px;
+    margin:30px;
 }
-    #overlay img{
-       margin-top:5%; 
-    }
-  
-    
-    
-    #left{
- margin-left: 100px;
-    
-}
-    #right{
-        margin-right:100px;
-    }
-}
-@keyframes gallery{
-    0% {transform: scale(1)
-    }
-    50% {transform:scale(1.02)
-    }
-    100% {transform:scale(1)
-    }
 }
