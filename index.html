@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <head>
-    <title> Lightbox </title>
-        <meta name='viewport' content="width=device-width, initial_scale=1.0">
+        <title> Lightbox </title>
+        <meta charset="utf-8">
         <link href="css/reset.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.11/css/lightgallery.css" rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
         <link href="css/styles.css" rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 </head>
 
 
 <header>
-     <form>
-        <input type="text" placeholder="Search">
-        </input>
-    
+     <form id="live-search" class="styled" method="post">
+        <input id="search" name="search" placeholder="Search" type="text" data-list=".list">
     </form>
 </header>
-<body>
-    <div class='gallery'>
-       <a href="Photos/01.jpg"><img class="thumbnail" src="Photos/Thumbnails/01.jpg" alt="I love hay bales. Took this snap on a drive through the countryside past some straw fields."></a>
+
+<main>
+    <div id='wrap'>
+    <div class="gallery list">
         
-       <a href="Photos/02.jpg"><img class="thumbnail" src="Photos/Thumbnails/02.jpg" alt="The lake was so calm today. We had a great view of the snow on the mountains from here."></a>
+        <a href="Photos/01.jpg" data-sub-html="<p>I love hay bales. Took this snap on a drive through the countryside past some straw fields.</p>">
+            <img class="thumbnail" src="Photos/Thumbnails/01.jpg" alt="Hay Bales">
+            <p>I love hay bales. Took this snap on a drive through the countryside past some straw fields.</p>
+        </a>
+
         
-       <a href="Photos/03.jpg"><img class="thumbnail" src="Photos/Thumbnails/03.jpg" alt="I hiked to the top of the mountain and got this picture of the canyon and trees below."></a>
+        <a href="Photos/02.jpg" data-sub-html="<p>The lake was so calm today. We had a great view of the snow on the mountains from here.</p>">
+            <img class="thumbnail" src="Photos/Thumbnails/02.jpg" alt="">
+            <p>he lake was so calm today. We had a great view of the snow on the mountains from here.</p>
+        </a>
+
         
-        <a href="Photos/04.jpg"><img class="thumbnail" src="Photos/Thumbnails/04.jpg" alt="It was amazing to see an iceberg up close, it was so cold but didn’t snow today."></a>
+        <a href="Photos/03.jpg" data-sub-html="<p>I hiked to the top of the mountain and got this picture of the canyon and trees below.</p>">
+          <img class="thumbnail" src="Photos/Thumbnails/03.jpg" alt="">
+          <p>I hiked to the top of the mountain and got this picture of the canyon and trees below.</p>
+        </a>
+
+        <a href="Photos/04.jpg" data-sub-html="<p>It was amazing to see an iceberg up close, it was so cold but didn’t snow today. </p>">
+          <img class="thumbnail" src="Photos/Thumbnails/04.jpg" alt="Iceberg">
+          <p>It was amazing to see an iceberg up close, it was so cold but didn’t snow today.</p>
+        </a>
+
+        <a href="Photos/05.jpg" data-sub-html="<p>The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</p>"> 
+         <img class="thumbnail" src="Photos/Thumbnails/05.jpg" alt="Desert">
+         <p>The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</p>
+        </a>
+
+        <a href="Photos/06.jpg" data-sub-html="<p>Fall is coming, I love when the leaves on the trees start to change color.</p>">
+            <img class="thumbnail" src="Photos/Thumbnails/06.jpg" alt="Fall">
+            <p>Fall is coming, I love when the leaves on the trees start to change color.</p>
+        </a>
+
+    
+        <a href="Photos/07.jpg" data-sub-html="<p>I drove past this plantation yesterday, everything is so green!!</p>">
+            <img class="thumbnail" src="Photos/Thumbnails/07.jpg" alt="Plantation">
+            <p>I drove past this plantation yesterday, everything is so green!</p>
+        </a>
         
-        <a href="Photos/05.jpg"><img class="thumbnail" src="Photos/Thumbnails/05.jpg" alt="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."></a>
+        <a href="Photos/08.jpg" data-sub-html="<p>My summer vacation to the Oregon Coast. I love the sandy dunes!</p>">
+            <img class="thumbnail" src="Photos/Thumbnails/08.jpg" alt='Oregon Coast'>
+            <p>My summer vacation to the Oregon Coast. I love the sandy dunes!</p>
+        </a>
+
+        <a href="Photos/09.jpg" data-sub-html="<p>We enjoyed a quiet stroll down this countryside lane.</p>">
+            <img class="thumbnail" src="Photos/Thumbnails/09.jpg" alt="Countryside">
+            <p>We enjoyed a quiet stroll down this countryside lane.</p>
+        </a>
+            
+        <a href="Photos/10.jpg" data-sub-html="<p>Sunset at the coast! The sky turned a lovely shade of orange.</p>">
+            <img class="thumbnail" src="Photos/Thumbnails/10.jpg" alt="">
+            <p>Sunset at the coast! The sky turned a lovely shade of orange.</p>
+        </a>
+
+        <a href="Photos/11.jpg" data-sub-html="<p>I did a tour of a cave today and the view of the landscape below was breathtaking.</p>">
+          <img class="thumbnail" src="Photos/Thumbnails/11.jpg" alt="I did a tour of a cave today and the view of the landscape below was breathtaking.">
+          <p>I did a tour of a cave today and the view of the landscape below was breathtaking.</p>
+        </a>
+
+        <a href="Photos/12.jpg" data-sub-html="<p>I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in. </p>">
+          <img class="thumbnail" src="Photos/Thumbnails/12.jpg" alt="">
+          <p>I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</p>
+        </a> 
         
-        <a href="Photos/06.jpg"><img class="thumbnail" src="Photos/Thumbnails/06.jpg" alt="Fall is coming, I love when the leaves on the trees start to change color."></a>
-        
-    <a href="Photos/07.jpg"><img class="thumbnail" src="Photos/Thumbnails/07.jpg" alt="I drove past this plantation yesterday, everything is so green!"></a>
-        
-        <a href="Photos/08.jpg"><img class="thumbnail" src="Photos/Thumbnails/08.jpg" alt="My summer vacation to the Oregon Coast. I love the sandy dunes!"></a>
-        
-        <a href="Photos/09.jpg"><img class="thumbnail" src="Photos/Thumbnails/09.jpg" alt="We enjoyed a quiet stroll down this countryside lane. 
-"></a>
-        
-       <a href="Photos/10.jpg"><img class="thumbnail" src="Photos/Thumbnails/10.jpg" alt="Sunset at the coast! The sky turned a lovely shade of orange."></a>
-        
-      <a href="Photos/11.jpg"><img class="thumbnail" src="Photos/Thumbnails/11.jpg" alt="I did a tour of a cave today and the view of the landscape below was breathtaking."></a>
-        
-       <a href="Photos/12.jpg"><img class="thumbnail" src="Photos/Thumbnails/12.jpg" alt="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."></a>
     </div>
-</body>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
- <script src="js/app.js"></script>
+        </div>
+               
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/lightbox/lightgallery.min.js"></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.11/css/lightgallery.min.css'></script>
+<script type="text/javascript" src="plugins/search/jquery.hideseek.min.js"></script>
+<script src="js/app.js"></script>
+    
+</main>
 </html>
